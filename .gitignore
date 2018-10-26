@@ -1,0 +1,4 @@
+.idea/
+*.iml
+*/target/
+task1/src/test/resources

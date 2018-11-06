@@ -2,7 +2,7 @@ package io.github.stranger777.task3;
 
 import  org.apache.commons.lang.reflect.*;
 import org.junit.*;
-org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.AfterEach;
 import java.util.ArrayList;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

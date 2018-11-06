@@ -12,14 +12,16 @@ public class PenConstructorsTest {
     static final  String FIELD_SIZE_LETTER = "sizeLetter";
     static final  String FIELD_COLOR = "color";
     
+    Pen pen = null;
+    
     @AfterEach
     tearDown(){
-    Pen pen = null;
+    pen = null;
     }
 
     @Test
     public void ConstructPenFromInk() throws IllegalAccessException {
-       Pen pen = new Pen( PenTest.PEN_DEFAULT_INK );
+       pen = new Pen( PenTest.PEN_DEFAULT_INK );
        String expected = String.valueOf( PenTest.PEN_DEFAULT_INK );
         String actual = FieldUtils.readDeclaredField(pen, FIELD_INK, true).toString();
         assertEquals(  expected, actual );
@@ -27,7 +29,7 @@ public class PenConstructorsTest {
 
     @Test
     public void ConstructPenFromInkAndSizeLetter() throws IllegalAccessException {
-        Pen pen = new Pen( PenTest.PEN_DEFAULT_INK, PenTest.PEN_DEFAULT_SIZE_LETTER );
+        pen = new Pen( PenTest.PEN_DEFAULT_INK, PenTest.PEN_DEFAULT_SIZE_LETTER );
         String ink = FieldUtils.readDeclaredField(pen, FIELD_INK, true).toString();
         String sizeLetter = FieldUtils.readDeclaredField(pen, FIELD_SIZE_LETTER, true).toString();
 

@@ -2,6 +2,7 @@ package io.github.stranger777.task3;
 
 import  org.apache.commons.lang.reflect.*;
 import org.junit.*;
+org.junit.jupiter.api.AfterEach;
 import java.util.ArrayList;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -10,6 +11,11 @@ public class PenConstructorsTest {
     static final String FIELD_INK = "inkContainerValue";
     static final  String FIELD_SIZE_LETTER = "sizeLetter";
     static final  String FIELD_COLOR = "color";
+    
+    @AfterEach
+    tearDown(){
+    Pen pen = null;
+    }
 
     @Test
     public void ConstructPenFromInk() throws IllegalAccessException {

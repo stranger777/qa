@@ -7,26 +7,26 @@ import org.openqa.selenium.By;
  */
 public class Button extends BaseElement {
 
-    public Button(final By locator, final String name) {
-        super(locator, name);
-    }
+  public Button(final By locator, final String name) {
+    super(locator, name);
+  }
 
-    public Button(String string, String name) {
-        super(string, name);
-    }
+  public Button(String string, String name) {
+    super(string, name);
+  }
 
 
-    public Button(By locator) {
-        super(locator);
-    }
+  public Button(By locator) {
+    super(locator);
+  }
 
-    protected String getElementType() {
-        return getLoc("loc.button");
-    }
+  protected String getElementType() {
+    return getLoc("loc.button");
+  }
 
-    public boolean isEnabled() {
-        return this.getElement().isEnabled();
-    }
+  public boolean isEnabled() {
+    return this.getElement().isEnabled();
+  }
 
 
 }

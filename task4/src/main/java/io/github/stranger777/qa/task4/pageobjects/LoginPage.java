@@ -32,8 +32,6 @@ public class LoginPage extends PageObject {
   private WebElement loginButton;
   @FindBy(css = authOpenerSelector)
   private WebElement authopener;
-  private String innerHTML;
-
 
   public LoginPage(WebDriver driver) {
     super(driver);

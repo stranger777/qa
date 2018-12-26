@@ -8,43 +8,43 @@ import org.testng.annotations.Test;
  */
 public abstract class BaseTest extends BaseEntity {
 
-    /**
-     * To override.
-     */
-    public abstract void runTest();
+  /**
+   * To override.
+   */
+  public abstract void runTest();
 
-    /**
-     * Test
-     *
-     * @throws Throwable Throwable
-     */
-    @Test
-    public void xTest() throws Throwable {
-        Class<? extends BaseTest> currentClass = this.getClass();
+  /**
+   * Test
+   *
+   * @throws Throwable Throwable
+   */
+  @Test
+  public void xTest() throws Throwable {
+    Class<? extends BaseTest> currentClass = this.getClass();
 
-        try {
-            logger.logTestName(currentClass.getName());
-            browser.navigate(Browser.getBaseUrl());
-            runTest();
-            logger.logTestEnd(currentClass.getName());
-        } catch (Throwable e) {
+    try {
+      logger.logTestName(currentClass.getName());
+      browser.navigate(Browser.getBaseUrl());
+      runTest();
+      logger.logTestEnd(currentClass.getName());
+    } catch (Throwable e) {
 
-            logger.warn("");
-            logger.warn(getLoc("loc.test.failed"));
-            logger.warn("");
-            logger.fatal(e.getMessage());
-        }
-
+      logger.warn("");
+      logger.warn(getLoc("loc.test.failed"));
+      logger.warn("");
+      logger.fatal(e.getMessage());
     }
 
-    /**
-     * Format logging
-     *
-     * @param message Message
-     * @return Message
-     */
-    protected String formatLogMsg(final String message) {
-        return message;
-    }
+  }
+
+  /**
+   * Format logging
+   *
+   * @param message Message
+   * @return Message
+   */
+  protected String formatLogMsg(final String message) {
+    return message;
+  }
 
 }

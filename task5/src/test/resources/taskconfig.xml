@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config>
+    <machine>
+        <browser>chrome</browser>
+        <url>https://store.steampowered.com/</url>
+        <language>english</language>
+    </machine>
+    <conditions>
+        <withbundle>true</withbundle>
+        <installer>
+            <size>
+                <bytes>1573568</bytes>
+            </size>
+        </installer>
+    </conditions>
+    <test>
+        <ageblocker>
+            <url>https://store.steampowered.com/agecheck/app/377160/</url>
+            <url>http://store.steampowered.com/agecheck/app/271590/</url>
+            <url>http://store.steampowered.com/app/552500/agecheck/</url>
+            <url>https://store.steampowered.com/agecheck/bundle/9384#</url>
+        </ageblocker>
+    </test>
+</config>
+
+        <!--
+            steamAgeBlockerLinks.add("https://store.steampowered.com/agecheck/app/377160/");
+            steamAgeBlockerLinks.add("http://store.steampowered.com/agecheck/app/271590/");
+            steamAgeBlockerLinks.add("http://store.steampowered.com/app/552500/agecheck");
+            steamAgeBlockerLinks.add("https://store.steampowered.com/agecheck/bundle/9384#");
+        -->

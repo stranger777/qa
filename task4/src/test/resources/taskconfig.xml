@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config>
+    <machine>
+        <browser>firefox</browser>
+        <url>https://shop.by/</url>
+        <csv>C:\QA\</csv>
+    </machine>
+    <user>
+        <login>userShop.by_60</login>
+        <password>Q6idlWpR</password>
+        <telephone>336772601</telephone>
+    </user>
+</config>

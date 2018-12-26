@@ -6,19 +6,17 @@ import java.util.Map;
 import static java.lang.System.out;
 
 public class MainSetEnvByArgs {
-    public static void main(String[] args) throws IOException, InterruptedException {
-        if (args[0] != "" && args[1] != "" && args[2] != "") {
-            String processName = args[0];
-            String envVarValue = args[1];
-            String envVarName = args[2];
-            ProcessBuilder processBuilder = new ProcessBuilder(processName);
-            Map<String, String> environment = processBuilder.environment();
+    public static void main(String[] args) throws IOException {
+        String processName = args[0];
+        String envVarValue = args[1];
+        String envVarName = args[2];
+        ProcessBuilder processBuilder = new ProcessBuilder(processName);
+        Map<String, String> environment = processBuilder.environment();
 
-            environment.put(envVarName, envVarValue);
+        environment.put(envVarName, envVarValue);
 
-            out.println(
-                    "Environment variable " +
-                            envVarName + " for " + processName + " (set in pom.xml): " + processBuilder.environment().get(envVarName));
-        }
+        out.println(
+                "Environment variable " +
+                        envVarName + " for " + processName + " (set in pom.xml): " + processBuilder.environment().get(envVarName));
     }
 }
